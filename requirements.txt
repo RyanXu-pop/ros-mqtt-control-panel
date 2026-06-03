@@ -1,0 +1,11 @@
+PySide6>=6.5
+paho-mqtt>=2.0
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+PyYAML>=6.0
+paramiko>=3.0
+Pillow>=10.0
+qasync>=0.28.0
+openpyxl>=3.1

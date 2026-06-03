@@ -1,0 +1,66 @@
+# Host configuration
+mqtt:
+  host: 192.168.0.100
+  port: 1883
+  username: ""
+  password: ""
+
+  topics:
+    goal: robot/goal
+    initial_pose: robot/initial_pose
+    pose: robot/pose
+    status: robot/status
+    voltage: robot/voltage
+    map: robot/map
+    scan: robot/scan
+    odom: robot/odom
+    odom_raw: robot/odom_raw
+    tf: robot/tf
+    tf_static: robot/tf_static
+    path: robot/path
+    cmd_vel: robot/cmd_vel
+
+# Robot SSH configuration
+ssh:
+  host: 192.168.0.101
+  port: 22
+  username: robot
+  password: "<robot-password>"
+
+# Local paths
+paths:
+  map_yaml: "maps/my_map.yaml"
+  record_xlsx: "data/location_record.xlsx"
+  initial_pose_json: "data/initial_pose.json"
+
+# UI parameters
+params:
+  theme: auto
+  map_bounds: [-10, 134, -19.5, 19.5]
+  map_scale: 1.0
+  map_pan_x: 0.0
+  map_pan_y: 0.0
+  enable_shared_origin: true
+  show_set_origin_button: true
+  show_pan_zoom_button: true
+  show_mapping_scan_overlay: true
+  navigation_arrival_threshold: 0.35
+
+# ROS topics
+topics:
+  amcl_pose_msg_type: geometry_msgs/PoseWithCovarianceStamped
+  pose_stamped_msg_type: geometry_msgs/PoseStamped
+  power_voltage_msg_type: std_msgs/UInt16
+
+  amcl_pose: /amcl_pose
+  move_base_goal: /goal_pose
+  initial_pose: /initialpose
+  power_voltage: /battery
+  odom: /odom
+  odom_raw: /odom_raw
+  map: /map
+  laser_scan: /scan
+  tf: /tf
+  tf_static: /tf_static
+  global_plan: /plan
+  cmd_vel: /cmd_vel
