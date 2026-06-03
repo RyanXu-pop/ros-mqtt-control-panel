@@ -1,0 +1,42 @@
+# Sensitive local configuration
+config.yaml
+.env
+.env.*
+*.local.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Build and generated files
+build/
+dist/
+outputs/
+logs/
+*.log
+*.xlsx
+.tasks.json
+
+# Local plans and runtime state
+data/inspection_plans.json
+
+# Large or local dependency artifacts
+*.whl
+*.tar.gz
+*.zip
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
